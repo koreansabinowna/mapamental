@@ -27,10 +27,10 @@ if (!fs.existsSync(UPLOAD_DIR)) fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 
 // ─── DB Pool ───────────────────────────────────────────────
 const pool = mysql.createPool({
-  host:     process.env.DB_HOST     || '193.203.175.11',
+  host:     process.env.DB_HOST     || 'localhost',
   user:     process.env.DB_USER     || 'root',
-  password: process.env.DB_PASS     || 'Tututeamo@123',
-  database: process.env.DB_NAME     || 'u715603993_mapamental',
+  password: process.env.DB_PASS     || '',
+  database: process.env.DB_NAME     || 'mindmap_db',
   waitForConnections: true,
   connectionLimit: 10,
 });
